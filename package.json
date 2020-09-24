@@ -1,7 +1,7 @@
 {
   "name": "cordova-plugin-nativeaudio",
-  "version": "3.1.1",
-  "description": "Cordova/PhoneGap Plugin for low latency Native Audio Playback, must have for HTML5 games",
+  "version": "3.1.2",
+  "description": "Capacitor Plugin for low latency Native Audio Playback based off of Cordova plugin",
   "cordova": {
     "id": "cordova-plugin-nativeaudio",
     "platforms": [
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wizpanda/cordova-plugin-nativeaudio.git"
+    "url": "https://github.com/trackleaf/cordova-plugin-nativeaudio.git"
   },
   "bugs": {
-    "url": "https://github.com/wizpanda/cordova-plugin-nativeaudio/issues"
+    "url": "https://github.com/trackleaf/cordova-plugin-nativeaudio/issues"
   },
   "keywords": [
     "cordova",
@@ -35,6 +35,6 @@
     "email": "rjfun.mobile@gmail.com"
   },{
     "name": "Sidney Bofah"
-  }],
+  }, { "name": "Michael Rincones" }],
   "license": "MIT"
 }
