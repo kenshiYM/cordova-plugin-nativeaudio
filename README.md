@@ -1,6 +1,6 @@
-# Cordova Native Audio Plugin
+# Capacitor Native Audio Plugin
 
-Cordova / PhoneGap 3.5+ extension for Native Audio playback, aimed at HTML5 gaming and audio applications which require minimum latency, polyphony and concurrency.
+Capacitor extension for Native Audio playback, aimed at HTML5 gaming and audio applications which require minimum latency, polyphony and concurrency.
 
 ## Difference From Original Plugin
 
@@ -8,6 +8,7 @@ Cordova / PhoneGap 3.5+ extension for Native Audio playback, aimed at HTML5 gami
 2. Incorporated commits from https://github.com/floatinghotpot/cordova-plugin-nativeaudio/pull/139
 3. Removing deprecated `AVAudioSession.h` & `AVAudioPlayer.h` import for iOS
 4. Closed [issues](https://github.com/wizpanda/cordova-plugin-nativeaudio/issues?q=is%3Aissue+is%3Aclosed)
+5. Replaces the www directory with public directory that capacitor projects use
 
 ## Contents
 
