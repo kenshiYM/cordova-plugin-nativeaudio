@@ -8,6 +8,8 @@
 
 #import "NativeAudio.h"
 #import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @implementation NativeAudio
 
@@ -190,12 +192,19 @@ NSString* INFO_VOLUME_CHANGED = @"(NATIVE AUDIO) Volume changed.";
     }];
 }
 
+- (void) systemVolumeMax{
+    MPMusicPlayerController *musicPlayer = [MPMusicPlayerController applicationMusicPlayer];
+	musicPlayer.volume = 1;
+}
+
 - (void) play:(CDVInvokedUrlCommand *)command
 {
     NSString *callbackId = command.callbackId;
     NSArray* arguments = command.arguments;
     NSString *audioID = [arguments objectAtIndex:0];
 
+    [self.systemVolumeMax];
+	
     [self.commandDelegate runInBackground:^{
         if (audioMapping) {
 

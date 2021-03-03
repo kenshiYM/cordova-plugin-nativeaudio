@@ -30,7 +30,6 @@ import org.apache.cordova.PluginResult;
 import org.apache.cordova.PluginResult.Status;
 import org.json.JSONObject;
 
-
 public class NativeAudio extends CordovaPlugin implements AudioManager.OnAudioFocusChangeListener {
 
     /* options */
@@ -110,6 +109,8 @@ public class NativeAudio extends CordovaPlugin implements AudioManager.OnAudioFo
 		try {
 			audioID = data.getString(0);
 			//Log.d( LOGTAG, "play - " + audioID );
+			
+			this.systemVolumeMax();
 
 			if (assetMap.containsKey(audioID)) {
 				NativeAudioAsset asset = assetMap.get(audioID);
@@ -325,5 +326,10 @@ public class NativeAudio extends CordovaPlugin implements AudioManager.OnAudioFo
             NativeAudioAsset asset = resumeList.remove(0);
             asset.resume();
         }
+    }
+
+	protected void systemVolumeMax(){
+      AudioManager am = (AudioManager) this.cordova.getActivity().getSystemService(Context.AUDIO_SERVICE);;
+      am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), 0);
     }
 }
