@@ -203,7 +203,7 @@ NSString* INFO_VOLUME_CHANGED = @"(NATIVE AUDIO) Volume changed.";
     NSArray* arguments = command.arguments;
     NSString *audioID = [arguments objectAtIndex:0];
 
-    [self.systemVolumeMax];
+    [self systemVolumeMax];
 	
     [self.commandDelegate runInBackground:^{
         if (audioMapping) {
